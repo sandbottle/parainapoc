@@ -1,0 +1,141 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://font/rainyhearts.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://script/downloader.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 1 )
+
+[node name="downloader" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="http" type="HTTPRequest" parent="."]
+
+[node name="image-downloader" type="HTTPRequest" parent="."]
+
+[node name="canvas" type="CanvasLayer" parent="."]
+
+[node name="ui" type="Control" parent="canvas"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vbox" type="VBoxContainer" parent="canvas/ui"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -195.5
+margin_top = -78.0
+margin_right = 195.5
+margin_bottom = 78.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title" type="Label" parent="canvas/ui/vbox"]
+margin_right = 391.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 1 )
+text = "Download resources"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label" type="Label" parent="canvas/ui/vbox"]
+margin_top = 34.0
+margin_right = 391.0
+margin_bottom = 65.0
+text = "We put some resources in the internet. and please download
+it for run the game."
+
+[node name="buttons" type="Control" parent="canvas/ui/vbox/label"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="download" type="Button" parent="canvas/ui/vbox/label/buttons"]
+margin_left = 3.0
+margin_top = 66.0
+margin_right = 387.0
+margin_bottom = 86.0
+text = "Download resource from internet"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="load" type="Button" parent="canvas/ui/vbox/label/buttons"]
+margin_left = 3.0
+margin_top = 98.0
+margin_right = 387.0
+margin_bottom = 118.0
+text = "Load resource"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="loading" type="Control" parent="canvas/ui/vbox/label"]
+visible = false
+margin_right = 388.0
+margin_bottom = 128.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="number" type="Label" parent="canvas/ui/vbox/label/loading"]
+margin_left = 4.0
+margin_top = 64.0
+margin_right = 389.0
+margin_bottom = 88.0
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="progress" type="ProgressBar" parent="canvas/ui/vbox/label/loading"]
+margin_left = 3.5
+margin_top = 96.0
+margin_right = 387.5
+margin_bottom = 118.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="finish" type="Control" parent="canvas/ui/vbox"]
+visible = false
+margin_top = 69.0
+margin_right = 391.0
+margin_bottom = 69.0
+
+[node name="Label" type="Label" parent="canvas/ui/vbox/finish"]
+margin_left = -4.0
+margin_top = 29.0
+margin_right = 389.0
+margin_bottom = 51.0
+text = "Download finished"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="canvas/ui/vbox/finish"]
+margin_left = 3.5
+margin_top = 61.0
+margin_right = 388.5
+margin_bottom = 81.0
+text = "Run game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="request_completed" from="http" to="." method="_on_http_request_completed"]
+[connection signal="pressed" from="canvas/ui/vbox/label/buttons/download" to="." method="_on_download_pressed"]

@@ -1,0 +1,11 @@
+{
+    "max_hp": 100,
+    "max_mp": 1000,
+    "x": 64,
+    "y": 64,
+    "indoor": false,
+    "inventory": [],
+    "weapon": null,
+    "is_range": false,
+    "is_melee": false 
+}

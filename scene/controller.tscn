@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://joystickx/virtual_joystick.tscn" type="PackedScene" id=1]
+[ext_resource path="res://joystickx/textures/butons.png" type="Texture" id=2]
+[ext_resource path="res://script/controller.gd" type="Script" id=3]
+[ext_resource path="res://joystickx/textures/sprint.png" type="Texture" id=4]
+[ext_resource path="res://joystickx/textures/inventory.png" type="Texture" id=5]
+[ext_resource path="res://joystickx/textures/build_mode.png" type="Texture" id=6]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 50.0
+
+[node name="controller" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Virtual joystick" parent="." instance=ExtResource( 1 )]
+margin_left = 25.0
+margin_top = -212.0
+margin_right = 199.0
+margin_bottom = -24.0
+
+[node name="control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="attack" type="TouchScreenButton" parent="control"]
+modulate = Color( 1, 1, 1, 0.615686 )
+position = Vector2( 841, 416 )
+shape = SubResource( 1 )
+
+[node name="costume" type="Sprite" parent="control/attack"]
+position = Vector2( 50, 50 )
+texture = ExtResource( 2 )
+hframes = 5
+
+[node name="sprint" type="TouchScreenButton" parent="control"]
+modulate = Color( 1, 1, 1, 0.615686 )
+position = Vector2( 19, 215 )
+normal = ExtResource( 4 )
+
+[node name="inventory" type="TouchScreenButton" parent="control"]
+modulate = Color( 1, 1, 1, 0.615686 )
+position = Vector2( 162, 239 )
+normal = ExtResource( 5 )
+
+[node name="build_mode" type="TouchScreenButton" parent="control"]
+modulate = Color( 1, 1, 1, 0.615686 )
+position = Vector2( 226, 375 )
+normal = ExtResource( 6 )
+
+[connection signal="pressed" from="control/attack" to="." method="_on_attack_pressed"]
+[connection signal="released" from="control/attack" to="." method="_on_attack_released"]
+[connection signal="pressed" from="control/sprint" to="." method="_on_sprint_pressed"]
+[connection signal="pressed" from="control/inventory" to="." method="_on_inventory_pressed"]
+[connection signal="pressed" from="control/build_mode" to="." method="_on_build_mode_pressed"]

@@ -1,0 +1,35 @@
+
+[
+    [
+        {
+            "name": "crafting_bench",
+            "id": 6, 
+            "type": "props"
+        }, 
+        {
+            "name": "pickable",
+            "id": 14,
+            "type": "props"
+        }, 
+        {
+            "name": "spike",
+            "id": 12,
+            "type": "props"
+        }, 
+        {
+            "name": "spawner",
+            "id": 16,
+            "type": "props"
+        }, 
+        {
+            "name": "turret",
+            "id": 9,
+            "type": "turret"           
+        }, 
+        {
+            "name": "chest",
+            "id": 8,
+            "type": "props"
+        }
+    ]
+]

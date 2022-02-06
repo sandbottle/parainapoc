@@ -1,0 +1,113 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://theme/theme.theme" type="Theme" id=1]
+[ext_resource path="res://script/home.gd" type="Script" id=2]
+[ext_resource path="res://art/compliment/title.png" type="Texture" id=3]
+
+[node name="canvas" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="banner" type="TextureRect" parent="."]
+margin_left = 224.0
+margin_top = 93.0
+margin_right = 736.0
+margin_bottom = 285.0
+size_flags_horizontal = 4
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="container" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vbox" type="VBoxContainer" parent="container"]
+margin_top = 91.0
+margin_right = 960.0
+margin_bottom = 449.0
+size_flags_horizontal = 5
+size_flags_vertical = 4
+
+[node name="placeholder" type="Control" parent="container/vbox"]
+margin_right = 960.0
+margin_bottom = 192.0
+rect_min_size = Vector2( 0, 192 )
+
+[node name="vbox" type="VBoxContainer" parent="container/vbox"]
+margin_top = 196.0
+margin_right = 960.0
+margin_bottom = 358.0
+
+[node name="version" type="Label" parent="container/vbox/vbox"]
+margin_left = 393.0
+margin_right = 566.0
+margin_bottom = 25.0
+size_flags_horizontal = 4
+size_flags_vertical = 1
+text = "Version placeholder"
+
+[node name="message" type="Label" parent="container/vbox/vbox"]
+margin_top = 29.0
+margin_right = 960.0
+margin_bottom = 54.0
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="start" type="Button" parent="container/vbox/vbox"]
+margin_left = 416.0
+margin_top = 58.0
+margin_right = 544.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 128, 0 )
+size_flags_horizontal = 4
+theme = ExtResource( 1 )
+text = "PLAY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="settings" type="Button" parent="container/vbox/vbox"]
+margin_left = 416.0
+margin_top = 112.0
+margin_right = 544.0
+margin_bottom = 162.0
+rect_min_size = Vector2( 128, 0 )
+size_flags_horizontal = 4
+theme = ExtResource( 1 )
+text = "RESET"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="copyright" type="Label" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = -29.0
+margin_right = 188.0
+rect_min_size = Vector2( 137, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Sandbottle, 2022"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="timer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="tween" type="Tween" parent="."]
+
+[connection signal="pressed" from="container/vbox/vbox/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="container/vbox/vbox/settings" to="." method="_on_reset_pressed"]

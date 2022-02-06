@@ -1,0 +1,42 @@
+[
+  {
+    "chicken": {
+      "type": "passive",
+      "hp": 10,
+      "speed": 350,
+      "loot_drop": [
+        {
+          "name": "Raw chicken", 
+          "number_range": 1,
+          "changes": 100
+        },
+        {
+          "name": "Feather",
+          "number_range": [0, 3],
+          "changes": 50
+        }
+      ]
+    },
+    "basic_zombie": {
+      "type": "hostile",
+      "hp": 10,
+      "damage": 10,
+      "speed": 50,
+      "team": "zombies",
+      "loot_drop": [
+        {
+          "name": "Cloth",
+          "number_range": 1,
+          "changes": 50
+        }
+      ]
+    },
+    "dog": {
+      "type": "ally",
+      "hp": 30,
+      "damage": 5,
+      "speed": 100,
+      "team": "player"
+    }
+  }
+]

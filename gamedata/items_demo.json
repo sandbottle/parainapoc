@@ -1,0 +1,587 @@
+[
+    {
+        "bread": {
+            "description": "Basic food",
+            "type": "food",
+            "trade_value": 5,
+            "craftable": true,
+            "recipe": [
+                {
+                    "name": "wheat",
+                    "number": 2
+                }
+            ],
+            "skin": 1
+        },
+        "hamburger": {
+            "description": "Food",
+            "type": "food",
+            "trade_value": 10,
+            "craftable": true,
+            "recipe": [
+                {
+                    "name": "bread",
+                    "number": 2
+                },
+                {
+                    "name": "cooked chicken",
+                    "number": 1
+                }
+            ],
+            "skin": 1
+        },
+        "cooked chicken": {
+            "description": "Energy drink",
+            "type": "food",
+            "trade_value": 10,
+            "craftable": false,
+            "skin": 1
+        },
+        "energy drink": {
+            "description": "Energy drink",
+            "type": "food",
+            "trade_value": 10,
+            "craftable": true,
+            "recipe": [
+                {
+                    "name": "lemon",
+                    "number": 1
+                },
+                {
+                    "name": "mint",
+                    "number": 2
+                },
+                {
+                    "name": "honey",
+                    "number": 1
+                }
+            ],
+            "skin": 1
+        },
+        "honey jamed bread": {
+            "description": "Food",
+            "type": "food",
+            "trade_value": 25,
+            "craftable": true,
+            "recipe": [
+                {
+                    "name": "bread",
+                    "number": 1
+                },
+                {
+                    "name": "honey",
+                    "number": 1
+                }
+            ],
+            "skin": 1
+        },
+        "vegetable soup": {
+            "description": "Food",
+            "type": "food",
+            "trade_value": 40,
+            "craftable": true,
+            "recipe": [
+                {
+                    "name": "carrot",
+                    "number": 2
+                },
+                {
+                    "name": "tomato",
+                    "number": 2
+                },
+                {
+                    "name": "potato",
+                    "number": 4
+                },
+                {
+                    "name": "spices",
+                    "number": 2
+                }
+            ],
+            "skin": 1
+        },
+        "fried egg": {
+            "description": "Food",
+            "type": "food",
+            "trade_value": 20,
+            "craftable": true,
+            "recipe": [
+                {
+                    "name": "egg",
+                    "number": 1
+                },
+                {
+                    "name": "spices",
+                    "number": 2
+                }
+            ],
+            "skin": 1
+        },
+        "salad": {
+            "description": "Food",
+            "type": "food",
+            "trade_value": 35,
+            "craftable": true,
+            "recipe": [
+                {
+                    "name": "tomato",
+                    "number": 2
+                },
+                {
+                    "name": "lettuce",
+                    "number": 1
+                },
+                {
+                    "name": "spices",
+                    "number": 1
+                }
+            ],
+            "skin": 1
+        },
+        "pancakes": {
+            "description": "Food",
+            "type": "food",
+            "trade_value": 35,
+            "craftable": true,
+            "recipe": [
+                {
+                    "name": "wheat",
+                    "number": 3
+                },
+                {
+                    "name": "egg",
+                    "number": 1
+                },
+                {
+                    "name": "milk",
+                    "number": 1
+                }
+            ],
+            "skin": 1
+        },
+        "wheat": {
+            "description": "Raw food for creating other food",
+            "type": "raw food",
+            "trade_value": 1,
+            "craftable": false,
+            "skin": 1
+        },
+        "carrot": {
+            "description": "Raw food for creating other food",
+            "type": "raw food",
+            "trade_value": 3,
+            "craftable": false,
+            "skin": 1
+        },
+        "beetroot": {
+            "description": "Raw food for creating other food",
+            "type": "raw food",
+            "trade_value": 3,
+            "craftable": false,
+            "skin": 1
+        },
+        "potato": {
+            "description": "Raw food for creating other food",
+            "type": "raw food",
+            "trade_value": 3,
+            "craftable": false,
+            "skin": 1
+        },
+        "tomato": {
+            "description": "Raw food for creating other food",
+            "type": "raw food",
+            "trade_value": 5,
+            "craftable": false,
+            "skin": 1
+        },
+        "paddy": {
+            "description": "Raw food for creating other food",
+            "type": "raw food",
+            "trade_value": 10,
+            "craftable": false,
+            "skin": 1
+        },
+        "milk": {
+            "description": "Raw food for creating other food",
+            "type": "raw food",
+            "trade_value": 10,
+            "craftable": false,
+            "skin": 1
+        },
+        "meat": {
+            "description": "Raw food for creating other food",
+            "type": "raw food",
+            "trade_value": 20,
+            "craftable": false,
+            "skin": 1
+        },
+        "egg": {
+            "description": "Raw food for creating other food",
+            "type": "raw food",
+            "trade_value": 10,
+            "craftable": false,
+            "skin": 1
+        },
+        "raw chicken": {
+            "description": "Raw food for creating other food",
+            "type": "raw food",
+            "trade_value": 20,
+            "craftable": false,
+            "skin": 1
+        },
+        "honey": {
+            "description": "Raw food for creating other food",
+            "type": "raw food",
+            "trade_value": 25,
+            "craftable": false,
+            "skin": 1
+        },
+        "spices": {
+            "description": "Raw food for creating other food",
+            "type": "raw food",
+            "trade_value": 10,
+            "craftable": false,
+            "skin": 1
+        },
+        "lettuce": {
+            "description": "Raw food for creating other food",
+            "type": "raw food",
+            "trade_value": 15,
+            "craftable": false,
+            "skin": 1
+        },
+        "branch": {
+            "description": "Basic material",
+            "type": "material",
+            "trade_value": 3,
+            "craftable": false,
+            "skin": 1
+        },
+        "wood": {
+            "description": "Basic material",
+            "type": "material",
+            "trade_value": 5,
+            "craftable": false,
+            "skin": 1
+        },
+        "planks": {
+            "description": "Basic material",
+            "type": "material",
+            "trade_value": 8,
+            "craftable": true,
+            "recipe": [
+                {
+                    "name": "wood",
+                    "number": 2
+                }
+            ],
+            "skin": 1
+        },
+        "stone": {
+            "description": "Basic material",
+            "type": "material",
+            "trade_value": 10,
+            "craftable": false,
+            "skin": 1
+        },
+        "iron": {
+            "description": "Basic material",
+            "type": "material",
+            "trade_value": 15,
+            "craftable": false,
+            "skin": 1
+        },
+        "rubber band": {
+            "description": "Basic material",
+            "type": "material",
+            "trade_value": 15,
+            "craftable": false,
+            "skin": 1
+        },
+        "gear": {
+            "description": "Material for make turret and building",
+            "type": "material",
+            "trade_value": 25,
+            "craftable": true,
+            "recipe": [
+                {
+                    "name": "iron",
+                    "number": 2
+                },
+                {
+                    "name": "copper",
+                    "number": 2
+                }
+            ],
+            "skin": 1
+        },
+        "computer chip": {
+            "description": "Material for make turret and building",
+            "type": "material",
+            "trade_value": 40,
+            "craftable": false,
+            "skin": 1
+        },
+        "copper": {
+            "description": "Basic material",
+            "type": "material",
+            "trade_value": 20,
+            "craftable": false,
+            "skin": 1
+        },
+        "spike": {
+            "description": "Material for make weapon and trap",
+            "type": "material",
+            "trade_value": 25,
+            "craftable": true,
+            "recipe": [
+                {
+                    "name": "iron",
+                    "number": 2
+                },
+                {
+                    "name": "copper",
+                    "number": 1
+                }
+            ],
+            "skin": 1
+        },
+        "gunpowder": {
+            "description": "Material for make turret, weapon and trap",
+            "type": "material",
+            "trade_value": 25,
+            "craftable": false,
+            "skin": 1
+        },
+        "ligthning rod": {
+            "description": "Material for make turret and trap",
+            "type": "material",
+            "trade_value": 40,
+            "craftable": true,
+            "recipe": [
+                {
+                    "name": "copper",
+                    "number": 3
+                },
+                {
+                    "name": "electrical wire",
+                    "number": 1
+                }
+            ],
+            "skin": 1
+        },
+        "electrical wire": {
+            "description": "Material for make turret and trap",
+            "type": "material",
+            "trade_value": 30,
+            "craftable": true,
+            "recipe": [
+                {
+                    "name": "rubber band",
+                    "number": 1
+                },
+                {
+                    "name": "copper",
+                    "number": 1
+                },
+                {
+                    "name": "iron",
+                    "number": 1
+                }
+            ],
+            "skin": 1
+        },
+        "gold": {
+            "description": "Basic material",
+            "type": "material",
+            "trade_value": 70,
+            "craftable": false,
+            "skin": 1
+        },
+        "cloth": {
+            "description": "Basic material",
+            "type": "material",
+            "trade_value": 15,
+            "craftable": true,
+            "recipe": [
+                {
+                    "name": "wool",
+                    "number": 2
+                }
+            ],
+            "skin": 1
+        },
+        "wool": {
+            "description": "Basic material",
+            "type": "material",
+            "trade_value": 10,
+            "craftable": false,
+            "skin": 1
+        },
+        "automated crossbow": {
+            "description": "Turret",
+            "type": "turret",
+            "trade_value": 250,
+            "craftable": true,
+            "recipe": [
+                {
+                    "name": "rubber band",
+                    "number": 2
+                },
+                {
+                    "name": "gear",
+                    "number": 3
+                },
+                {
+                    "name": "plank",
+                    "number": 3
+                },
+                {
+                    "name": "iron",
+                    "number": 3
+                },
+                {
+                    "name": "copper",
+                    "number": 2
+                },
+                {
+                    "name": "computer chip",
+                    "number": 1
+                }
+            ],
+            "skin": 1
+        },
+        "zapper": {
+            "description": "Turret",
+            "type": "turret",
+            "trade_value": 350,
+            "craftable": true,
+            "recipe": [
+                {
+                    "name": "lightning rod",
+                    "number": 1
+                },
+                {
+                    "name": "electrical wire",
+                    "number": 3
+                },
+                {
+                    "name": "copper",
+                    "number": 5
+                },
+                {
+                    "name": "computer chip",
+                    "number": 2
+                },
+                {
+                    "name": "iron",
+                    "number": 5
+                }
+            ],
+            "skin": 1
+        },
+        "rocket launcher": {
+            "description": "Turret",
+            "type": "turret",
+            "trade_value": 610,
+            "craftable": false,
+            "recipe": [
+                {
+                    "name": "electrical wire",
+                    "number": 5
+                },
+                {
+                    "name": "gear",
+                    "number": 5
+                },
+                {
+                    "name": "iron",
+                    "number": 5
+                },
+                {
+                    "name": "computer chip",
+                    "number": 3
+                }
+            ],
+            "skin": 1
+        },
+        "corrosive": {
+            "description": "Turret",
+            "type": "turret",
+            "trade_value": 625,
+            "craftable": true,
+            "recipe": [
+                {
+                    "name": "iron",
+                    "number": 10
+                },
+                {
+                    "name": "copper",
+                    "number": 4
+                },
+                {
+                    "name": "gold",
+                    "number": 1
+                },
+                {
+                    "name": "electrical wire",
+                    "number": 4
+                },
+                {
+                    "name": "computer chip",
+                    "number": 3
+                },
+                {
+                    "name": "gear",
+                    "number": 5
+                }
+            ],
+            "skin": 1
+        },
+        "explosive automated crossbow": {
+            "description": "Turret",
+            "type": "turret",
+            "trade_value": 750,
+            "craftable": true,
+            "recipe": [
+                {
+                    "name": "rubber band",
+                    "number": 2
+                },
+                {
+                    "name": "gear",
+                    "number": 5
+                },
+                {
+                    "name": "plank",
+                    "number": 5
+                },
+                {
+                    "name": "iron",
+                    "number": 7
+                },
+                {
+                    "name": "copper",
+                    "number": 5
+                },
+                {
+                    "name": "computer chip",
+                    "number": 3
+                },
+                {
+                    "name": "gunpowder",
+                    "number": 5
+                },
+                {
+                    "name": "wood",
+                    "number": 5
+                },
+                {
+                    "name": "cloth",
+                    "number": 7
+                }
+            ],
+            "skin": 1
+        }
+    }
+]

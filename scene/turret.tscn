@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://art/tilemap/demo-asset.png" type="Texture" id=1]
+[ext_resource path="res://script/turret.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 16.0
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 352.0
+
+[node name="turret" type="KinematicBody2D"]
+collision_layer = 16
+script = ExtResource( 2 )
+
+[node name="muzzle" type="Position2D" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 48, 0 )
+z_index = 10
+
+[node name="col" type="CollisionShape2D" parent="."]
+shape = SubResource( 3 )
+
+[node name="costumes" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+hframes = 10
+vframes = 2
+frame = 19
+
+[node name="costumes2" type="Sprite" parent="."]
+position = Vector2( 32, 0 )
+scale = Vector2( 1, 0.125 )
+z_index = 1
+texture = ExtResource( 1 )
+hframes = 10
+vframes = 2
+frame = 12
+
+[node name="radius" type="Area2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="area" type="CollisionShape2D" parent="radius"]
+shape = SubResource( 2 )
+
+[node name="atk-cooldown" type="Timer" parent="."]
+process_mode = 0
+autostart = true
+
+[connection signal="body_entered" from="radius" to="." method="_on_radius_body_entered"]
+[connection signal="body_exited" from="radius" to="." method="_on_radius_body_exited"]
+[connection signal="timeout" from="atk-cooldown" to="." method="_on_atkcooldown_timeout"]

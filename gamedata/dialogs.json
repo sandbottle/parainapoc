@@ -1,0 +1,18 @@
+[
+	{
+		"id": 1,
+		"name": "Tutorial",
+		"message": "Hi there. Welcome to the game. To move, you can use WASD or Joystick! ",
+		"isplayer": false,
+		"nextid": 0,
+		"buttons": ["Open Shop"],
+		"action": ["open_shop()"]
+	},
+    {
+        "id": 2,
+        "name": "Tutorial",
+        "message": "You need a weapon for attacking the zombies now. You can take that gun by walking to it.",
+        "isplayer": false,
+        "nextid": 0
+    }
+]

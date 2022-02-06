@@ -1,0 +1,37 @@
+[
+    {
+        "stone": {
+            "description": "Basic material",
+            "type": "material",
+            "trade_value": 3,
+            "craftable": false,
+            "skin": 0
+        },
+        "bread": {
+            "description": "Basic food",
+            "type": "food",
+            "trade_value": 5,
+            "craftable": true,
+            "recipe": [
+                {
+                    "name": "stone",
+                    "number": 1
+                }
+            ],
+            "skin": 1
+        }, 
+        "wall": {
+            "description": "Basic wall",
+            "type": "building",
+            "trade_value": 10,
+            "craftable": true,
+            "recipe": [
+                {
+                    "name": "stone",
+                    "number": 3
+                }
+            ],
+            "skin": 2
+        }
+    }
+]

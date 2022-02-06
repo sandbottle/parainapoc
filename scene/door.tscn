@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://script/door.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 96 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 32, 32 )
+
+[node name="door" type="Node2D"]
+
+[node name="door-body" type="StaticBody2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="door-opener" type="Area2D" parent="door-body"]
+visible = false
+
+[node name="area" type="CollisionShape2D" parent="door-body/door-opener"]
+position = Vector2( 32, 40 )
+shape = SubResource( 1 )
+
+[node name="door-sensor" type="Area2D" parent="door-body"]
+
+[node name="area" type="CollisionShape2D" parent="door-body/door-sensor"]
+position = Vector2( 32, 32 )
+shape = SubResource( 2 )
+
+[node name="col" type="CollisionShape2D" parent="door-body"]
+position = Vector2( 32, 32 )
+shape = SubResource( 4 )
+disabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="body_exited" from="door-body/door-sensor" to="door-body" method="_on_doorsensor_body_exited"]
