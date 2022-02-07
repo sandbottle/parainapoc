@@ -74,7 +74,7 @@ func _remove():
 # trap
 func _spawn():
 	var enemy = actor.instance()
-	enemy._new('dog')
+	enemy._new('basic_zombie')
 
 	_rand.randomize()
 	

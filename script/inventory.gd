@@ -159,19 +159,20 @@ func move_to_different(to_array, item, number, to):
 	var index = items.find(item)
 	
 	if (index != -1):
-		var to_moved_item = items[index]
-		var to_moved_item_number = item_number[index]
-		
-		if (number > to_moved_item_number):
-			number = to_moved_item_number
-		
-		to_array.append({
-			'item': to_moved_item,
-			'number': number,
-			'pos': to
-		}, false, true)
-		
-		remove({
-			'item': to_moved_item,
-			'number': number 
-		})
+		if (to_array.items[to] == item or to_array.items[to] == null):
+			var to_moved_item = items[index]
+			var to_moved_item_number = item_number[index]
+			
+			if (number > to_moved_item_number):
+				number = to_moved_item_number
+			
+			to_array.append({
+				'item': to_moved_item,
+				'number': number,
+				'pos': to
+			}, false, true)
+			
+			remove({
+				'item': to_moved_item,
+				'number': number 
+			})

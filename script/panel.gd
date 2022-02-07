@@ -164,22 +164,23 @@ func drop_data(_pos, data):
 					temp_from = player.inventory
 				
 				temp_from.move(data.cellindex, cellindex)
-				
-			if (celltype == 'chest'):
-				var temp_from
-				var temp_to
-				
-				if (is_players):
-					temp_from = player.gm_opened_sender._inventory
-					temp_to = player.inventory
-				else:
-					temp_from = player.inventory
-					temp_to = player.gm_opened_sender._inventory
+			else:
+				if (celltype == 'chest'):
+					var temp_from
+					var temp_to
 					
-				temp_from.move_to_different(temp_to, item, itemcount, cellindex)
+					if (is_players):
+						temp_from = player.gm_opened_sender._inventory
+						temp_to = player.inventory
+					else:
+						temp_from = player.inventory
+						temp_to = player.gm_opened_sender._inventory
+						
+					temp_from.move_to_different(temp_to, item, itemcount, cellindex)
 
 func _on_panel1_gui_input(event):
 #	if (event is InputEventMouseButton && event.pressed):
+#		chest.get_node()
 #		trading.get_node('vbox/hbox/trader/container/scroll/trader_grid/panel1').updateitem(item)
 #		trading.get_node('vbox/hbox/trader/container/scroll/trader_grid/panel1').updatelabel(1)
 	return
